@@ -1,5 +1,7 @@
 package linkedList.reverseList;
 
+import linkedList.entity.ListNode;
+
 /**
  * 92.Reverse Linked List II
  *
@@ -9,7 +11,7 @@ package linkedList.reverseList;
  */
 class Solution92 {
 
-  public ListNode reverseListBetween(ListNode head, int m, int n) {
+  public static ListNode reverseList(ListNode head, int m, int n) {
     if (head == null || m >= n) {
       return head;
     }
@@ -32,5 +34,18 @@ class Solution92 {
     prevM.next = nNode;
     mNode.next = postN;
     return dummy.next;
+  }
+
+  public static void main(String[] args) {
+    int      m    = 1;
+    int      n    = 5;
+    ListNode head = new ListNode(1);
+    for (int i = 2; i <= n; i++) {
+      head.add(i);
+    }
+    System.out.println("原链表：");
+    System.out.println(head.toString());
+    System.out.println("修改后的链表：");
+    System.out.println(reverseList(head, m, n).toString());
   }
 }

@@ -2,6 +2,8 @@ package linkedList.copyListWithRandomPointer;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
+import linkedList.entity.Node;
 
 /**
  * @author : lihuiming
@@ -10,7 +12,7 @@ import java.util.Map;
  */
 public class Solution138 {
 
-  public Node copyRandomList1(Node head) {
+  public static Node copyRandomList1(Node head) {
     if (head == null) {
       return null;
     }
@@ -42,7 +44,7 @@ public class Solution138 {
     return map.get(head);
   }
 
-  public Node copyRandomList2(Node head) {
+  public static Node copyRandomList2(Node head) {
     if (head == null) {
       return null;
     }
@@ -65,7 +67,7 @@ public class Solution138 {
     return map.get(head);
   }
 
-  public Node copyRandomList3(Node head) {
+  public static Node copyRandomList3(Node head) {
     if (head == null) {
       return null;
     }
@@ -89,7 +91,7 @@ public class Solution138 {
     // node: 1 -> 1' -> 2 -> 2' -> 3 -> 3'
     // head: 1 -> 2 -> 3
     // cloneNode: 1' -> 2' -> 3'
-    Node move = head.next;
+    Node move      = head.next;
     Node cloneNode = head.next;
     while (head != null && head.next != null) {
       head.next = head.next.next;
@@ -102,7 +104,7 @@ public class Solution138 {
     return cloneNode;
   }
 
-  public Node copyRandomList4(Node head) {
+  public static Node copyRandomList4(Node head) {
     if (head == null) {
       return null;
     }
@@ -133,5 +135,19 @@ public class Solution138 {
       node = temp;
     }
     return cloneNode;
+  }
+
+  public static void main(String[] args) {
+    int    n      = 3;
+    Node   head   = new Node(1);
+    Random random = new Random();
+    for (int i = 2; i <= n; i++) {
+      // TODO 需要设置random
+//      head.add(i, Math.random(1));
+    }
+    System.out.println("原链表：");
+    System.out.println(head.toString());
+    System.out.println("修改后的链表：");
+    System.out.println(copyRandomList1(head).toString());
   }
 }
