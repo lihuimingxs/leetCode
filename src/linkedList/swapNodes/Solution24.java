@@ -3,11 +3,14 @@ package linkedList.swapNodes;
 import linkedList.entity.ListNode;
 
 /**
+ * 24. Swap Nodes in Pairs
+ *
  * @author : lihuiming
  * @version : 2020/11/16 20:50
  * @modified:
  */
 public class Solution24 {
+
   public static ListNode swapPairs(ListNode head) {
     if (head == null || head.next == null) {
       return head;

@@ -6,6 +6,8 @@ import java.util.Random;
 import linkedList.entity.Node;
 
 /**
+ * 138. 复制带随机指针的链表
+ *
  * @author : lihuiming
  * @version : 2020/10/13 14:07
  * @modified:
@@ -142,8 +144,7 @@ public class Solution138 {
     Node   head   = new Node(1);
     Random random = new Random();
     for (int i = 2; i <= n; i++) {
-      // TODO 需要设置random
-//      head.add(i, Math.random(1));
+      head.add(i, random.nextInt(3));
     }
     System.out.println("原链表：");
     System.out.println(head.toString());
