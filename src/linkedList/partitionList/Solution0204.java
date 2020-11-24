@@ -3,7 +3,7 @@ package linkedList.partitionList;
 import linkedList.entity.ListNode;
 
 /**
- * 面试题 02.04. 分割链表
+ * 面试题 02.04. Partition List LCCI
  *
  * @author : lihuiming
  * @version : 2020/11/22 10:11

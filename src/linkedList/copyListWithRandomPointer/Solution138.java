@@ -6,7 +6,7 @@ import java.util.Random;
 import linkedList.entity.Node;
 
 /**
- * 138. 复制带随机指针的链表
+ * 138. Copy List with Random Pointer
  *
  * @author : lihuiming
  * @version : 2020/10/13 14:07

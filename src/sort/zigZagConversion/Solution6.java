@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 6. ZigZag Conversion
+ *
  * @author : lihuiming
  * @version : 2020/11/24 13:19
  * @modified:
@@ -21,7 +23,7 @@ public class Solution6 {
       rows.add(new StringBuffer());
     }
     // 按行添加字符
-    int curRow = 0;
+    int     curRow    = 0;
     boolean goingDown = false;
     for (char c : s.toCharArray()) {
       rows.get(curRow).append(c);

@@ -4,6 +4,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 146. LRU Cache
+ *
  * @author : lihuiming
  * @version : 2020/11/24 01:12
  * @modified:
@@ -26,7 +28,7 @@ public class LruCache {
   private final int                     capacity;
   private       Map<Integer, CacheNode> cacheNodeMap = new HashMap<>();
   private       CacheNode               head         = new CacheNode(-1, -1);
-  private       CacheNode               tail              = new CacheNode(-1, -1);
+  private       CacheNode               tail         = new CacheNode(-1, -1);
 
   public LruCache(int capacity) {
     this.capacity = capacity;

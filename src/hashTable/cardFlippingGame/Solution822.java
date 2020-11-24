@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 
 /**
- * 翻转卡牌游戏
+ * 822. Card Flipping Game
  *
  * @author : lihuiming
  * @version : 2020/11/22 10:11
